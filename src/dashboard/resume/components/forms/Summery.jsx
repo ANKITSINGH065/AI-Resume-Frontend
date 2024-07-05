@@ -42,6 +42,8 @@ function Summery({enabledNext}) {
                 summery:summery
             }
         }
+        console.log(params?.resumeId);
+        
         GlobalApi.UpdateResumeDetail(params?.resumeId,data).then(resp=>{
             console.log(resp);
             enabledNext(true);

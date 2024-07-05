@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
-function SummeryPreview({resumeInfo}) {
+function SummeryPreview({ resumeInfo }) {
   return (
-    <p className='text-xs'>
-        {resumeInfo?.summery}
-    </p>
-  )
+    <div className="my-6">
+     
+      <p className="text-xs">{resumeInfo?.summery}</p>
+    </div>
+  );
 }
 
-export default SummeryPreview
+export default SummeryPreview;

@@ -19,13 +19,15 @@ const formField={
 
 }
 function Experience() {
-    const [experinceList,setExperinceList]=useState([]);
+    const [experinceList,setExperinceList]=useState([formField]);
     const {resumeInfo,setResumeInfo}=useContext(ResumeInfoContext);
     const params=useParams();
     const [loading,setLoading]=useState(false);
 
     useEffect(()=>{
-        resumeInfo?.Experience.length>0&&setExperinceList(resumeInfo?.Experience)
+        if (resumeInfo?.experience && resumeInfo.experience.length > 0) {
+            setExperinceList(resumeInfo.experience);
+        }
         
     },[])
 
@@ -64,7 +66,7 @@ function Experience() {
     useEffect(()=>{
         setResumeInfo({
             ...resumeInfo,
-            Experience:experinceList
+            experience:experinceList
         });
      
     },[experinceList]);
@@ -74,7 +76,7 @@ function Experience() {
         setLoading(true)
         const data={
             data:{
-                Experience:experinceList.map(({ id, ...rest }) => rest)
+                experience:experinceList.map(({ id, ...rest }) => rest)
             }
         }
 

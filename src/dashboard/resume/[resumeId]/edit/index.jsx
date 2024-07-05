@@ -8,6 +8,7 @@ import GlobalApi from './../../../../../service/GlobalApi';
 
 function EditResume() {
     const {resumeId}=useParams();
+    console.log(resumeId)
     const [resumeInfo,setResumeInfo]=useState();
     useEffect(()=>{
        

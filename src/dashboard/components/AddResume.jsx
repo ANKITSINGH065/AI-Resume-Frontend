@@ -41,7 +41,7 @@ function AddResume() {
             if(resp)
             {
                 setLoading(false);
-                navigation('/dashboard/resume/'+resp.data.data.documentId+"/edit");
+                navigation('/dashboard/resume/'+resp.data.data.id+"/edit");
             }
         },(error)=>{
             setLoading(false);

@@ -38,6 +38,7 @@ function PersonalDetail({enabledNext}) {
         const data={
             data:formData
         }
+        
         GlobalApi.UpdateResumeDetail(params?.resumeId,data).then(resp=>{
             console.log(resp);
             enabledNext(true);
